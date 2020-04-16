@@ -1,4 +1,5 @@
 # Assumption : Supplied matrix is invertible
+
 makeCacheMatrix = function(mtrx = matrix()) 
 {
   j = NULL
@@ -15,6 +16,7 @@ makeCacheMatrix = function(mtrx = matrix())
        getinverse = getinverse)
 }
 
+# This function check for inverse. If exists use it otherwise create a inverse matrix
 cacheSolve = function(mtrx, ...) 
 {
   print("original matrix is:")
