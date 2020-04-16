@@ -1,4 +1,6 @@
-load("CachingofInvMatrix.R")
+load("CachingofInvMatrix.R") # loading the source file
+
+# This is test case to test matrix inverse functions
 
 #2X2 matrxi test
 m <- matrix(c(0, 2, 1, 0), nrow = 2, ncol = 2, byrow = TRUE)
