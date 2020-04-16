@@ -8,6 +8,7 @@ makeCacheMatrix = function(mtrx = matrix())
     mtrx <<- y
     j <<- NULL
   }
+  
   get = function() mtrx
   setinverse = function(inverse) j <<- inverse
   getinverse = function() j
