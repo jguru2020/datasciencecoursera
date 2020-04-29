@@ -9,13 +9,13 @@
 <li>Laying</li>
 <p>
 
-<h2> These experimental data sets have used the following <b>Identifiers</b>: <h2>
+<h3> These experimental data sets have used the following Identifiers:</h3>
 <p>
 <li>Subject : Id of the test subject</li>
 <li>Activity : Type of activity perfomed while corresponding measurements were recorded</li>
 </p>
 
-<h2> Following measurements were recorded during the experiment: </h2>
+<h3> Following measurements were recorded during the experiment: </h3>
 <p>
 <li>	tBodyAccMeanX </li>
 <li>	tBodyAccMeanY	</li>
