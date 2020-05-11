@@ -26,7 +26,17 @@ completeCases <- completeCases[ ,!(names(completeCases) %in% c("Date","Time"))]
 completeCases <- cbind(dateTimeField, completeCases)
 
 ## Format dateTime Column
-completeCases$dateTime <- as.POSIXct(dateTimeField)
+completeCases$dateTime = as.POSIXct(dateTimeField)
 
-# Plot-1: Creating the histogram
-hist(t$Global_active_power, main="Global Active Power", xlab = "Global Active Power (KW)", col="blue")
+#Plot-1: Creating the histogram
+
+hist(completeCases$Global_active_power, main="Global Active Power", 
+     xlab = "Global Active Power (KW)", col="blue")
+
+## Save file and close device
+#dev.copy(png,"Histogram.png", width=500, height=500)
+#dev.off()
+
+# Creating Plot-2
+plot(completeCases$Global_active_power~completeCases$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+

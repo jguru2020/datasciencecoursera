@@ -1,7 +1,14 @@
 # This file reads, cleans and prepares relevant data for plotting individual plots
-data_full <- read.csv("household_power_consumption.txt", header=T, sep=';', na.strings="?", 
+
+#Download and save household_power_consumption.txt file along with R file(in the same folder)
+completeData = read.csv("household_power_consumption.txt", header=T, sep=';', na.strings="?", 
                       nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
-data1 <- subset(data_full, Date %in% c("1/2/2007","2/2/2007"))
-data1$Date <- as.Date(data1$Date, format="%d/%m/%Y")
-datetime <- paste(as.Date(data1$Date), data1$Time)
-data1$Datetime <- as.POSIXct(datetime)
+
+#Instead of processing the entire data set for plotting, extract the subset of 
+#the data based on the analysis period
+subsetData = subset(completeData, Date %in% c("1/2/2007","2/2/2007"))
+subsetData$Date = as.Date(subsetData$Date, format="%d/%m/%Y")
+
+#Combine date and time columns into one field called 'DateTime'
+datetime = paste(as.Date(subsetData$Date), subsetData$Time)
+subsetData$Datetime = as.POSIXct(datetime)

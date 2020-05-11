@@ -1,7 +1,8 @@
 #Load Data
 source("LoadAndPrepareData.R")
+
 #Configure plot
-with(data1, {
+with(subsetData, {
   plot(Global_active_power~Datetime, type="l",
        ylab="Global Active Power (KW/kilowatts)", xlab="")
 })

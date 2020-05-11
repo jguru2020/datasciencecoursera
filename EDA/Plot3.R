@@ -2,9 +2,9 @@
 source("LoadAndPrepareData.R")
 
 #Configure plot
-with(data1, {
+with(subsetData, {
   plot(Sub_metering_1~Datetime, type="l",
-       ylab="Global Active Power (kilowatts)", xlab="")
+       ylab="Global Active Power (KW/kilowatts)", xlab="")
   lines(Sub_metering_2~Datetime,col='Red')
   lines(Sub_metering_3~Datetime,col='Blue')
 })
@@ -13,5 +13,6 @@ legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2,
 
 #Save plot to respective file
 dev.copy(png,"Plot3.png", width=480, height=480)
+
 #Close the device
 dev.off()
