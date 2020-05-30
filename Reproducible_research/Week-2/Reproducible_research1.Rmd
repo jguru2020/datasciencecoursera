@@ -1,0 +1,14 @@
+---
+title: "Reproducible research -- Project 1"
+author: "Gururaj"
+date: "5/29/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Course project-1  
+
+TBD
