@@ -48,7 +48,8 @@ g = ggplot(totalStepsPerDay, aes(x = steps)) +
   geom_histogram(color="black", fill="grey", binwidth = 1000) +
   labs(title = "Histogram for Steps per Day", x = "Steps", y = "Frequency")
 print(g)
-```
+```  
+
 ### 3. Mean and median for number of steps taken each day  
 
 ```{r calcMean}
@@ -179,5 +180,5 @@ ggplot(stepsPerWeekday, aes(x = interval, y = steps)) +
 ```  
 
 Weekend activities have reported more number of steps than week-day activities though one of 
-the week-day peeked to maximum number of steps.m
+the week-day peeked to maximum number of steps.
 
