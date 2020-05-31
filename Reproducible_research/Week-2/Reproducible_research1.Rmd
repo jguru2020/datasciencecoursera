@@ -9,6 +9,82 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Course project-1  
+# Overview  
+As part of this assignment, analysing the data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up.
 
-TBD
+### Load relevant libraries
+
+```{r loadLibs}
+library("data.table")
+library(ggplot2)
+```
+### Prepare data for analysis
+```{r getData}
+activitydata = read.csv("activity.csv", header=TRUE, sep=",")
+str(activitydata)
+```
+### Format activity data
+```{r formatData}
+activitydata$date = as.Date(activitydata$date, format="%Y-%m-%d")
+activitydata$interval = as.factor(activitydata$interval)
+str(activitydata)
+head(activitydata,10)
+```
+### 1. Total number of steps taken per day
+```{r calc1}
+totalStepsPerDay = aggregate(steps ~ date, data=activitydata, FUN=sum)
+colnames(totalStepsPerDay) = c("date", "steps")
+head(totalStepsPerDay,10)
+```
+### 2. Histogram of the total number of steps taken each day
+```{r plot1}
+g = ggplot(totalStepsPerDay, aes(x = steps)) +
+  geom_histogram(color="black", fill="grey", binwidth = 1000) +
+  labs(title = "Histogram for Steps per Day", x = "Steps", y = "Frequency")
+print(g)
+```
+### 3. Mean and median for number of steps taken each day  
+
+```{r calcMean}
+meanOfStepsPerDay =  mean(totalStepsPerDay$steps)
+paste("Mean of Steps per Day: " , meanOfStepsPerDay)
+mediaOfStepsPerDay = median(totalStepsPerDay$steps)
+paste("Median of Steps per Day: " , mediaOfStepsPerDay)
+```
+
+### 4. Time series plot of the average number of steps taken
+
+```{r calc2}
+
+stepsPerInterval = aggregate(steps ~ interval, data = activitydata, FUN = mean, na.rm = TRUE)
+stepsPerInterval$interval = as.integer(levels(stepsPerInterval$interval)[stepsPerInterval$interval])
+colnames(stepsPerInterval) = c("interval", "steps")
+head(stepsPerInterval,5)
+
+```
+```{r plot2}
+g = ggplot(stepsPerInterval, aes(x = interval, y = steps)) + 
+            geom_line(col = "blue", size = 1)+
+            labs(title = "Average Daily Activity-- Pattern", x = "Interval", y = "Steps")
+
+print(g)
+
+```
+### 5. The 5-minute interval that, on average, contains the maximum number of steps  
+
+```{r calc3}
+maxInterval= stepsPerInterval[which.max(stepsPerInterval$steps),]
+maxInterval
+```
+
+## Imputing missing values
+
+### 1 NUmber of missing values in the activity data set
+```{r calc4}
+
+missingValues = sum(is.na(activitydata$steps))
+paste(" Missing values in the activity data set are: " , missingValues)
+```
+
+
+
