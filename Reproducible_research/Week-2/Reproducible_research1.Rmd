@@ -69,7 +69,8 @@ g = ggplot(stepsPerInterval, aes(x = interval, y = steps)) +
 
 print(g)
 
-```
+```  
+
 ### 5. The 5-minute interval that, on average, contains the maximum number of steps  
 
 ```{r calc3}
@@ -85,6 +86,88 @@ maxInterval
 missingValues = sum(is.na(activitydata$steps))
 paste(" Missing values in the activity data set are: " , missingValues)
 ```
+
+### 2. Strategy for filling in all of the missing values in the dataset.  
+
+For populating missing values, suggest to replace missing values with the mean values at same intervals accross days!
+
+### 3. New data set by replacing missing values
+```{r calc5}
+newData = activitydata
+indexOfNA = which(is.na(newData$steps))
+  for (i in indexOfNA) 
+    {
+      newData$steps[i] <- with(stepsPerInterval, steps[interval = newData$interval[i]])
+  }
+head(newData,10)
+
+# Check if there are any missing values in the new data set
+missingValues = sum(is.na(newData$steps))
+paste(" Missing values in the new activity data set are: " , missingValues)
+
+```
+### 4. Analyse New data after replacing the missing values  
+
+Analysing the new data set by looking at the histogram, mean/median values below:
+
+### 4.1. Total number of steps taken per day
+```{r calc11}
+totalStepsPerDay_1 = aggregate(steps ~ date, data=newData, FUN=sum)
+colnames(totalStepsPerDay_1) = c("date", "steps")
+head(totalStepsPerDay_1,10)
+```
+### 4.2. Histogram of the total number of steps taken each day
+```{r plot11}
+g1 = ggplot(totalStepsPerDay_1, aes(x = steps)) +
+  geom_histogram(color="black", fill="blue", binwidth = 1000) +
+  labs(title = "Histogram for Steps per Day(without NAs)", x = "Steps", y = "Frequency")
+print(g1)
+```
+
+### 4.3. Mean and median for number of steps taken each day  
+
+```{r calcMean1}
+meanOfStepsPerDay_1 =  mean(totalStepsPerDay_1$steps)
+paste("Mean of Steps per Day: " , meanOfStepsPerDay_1)
+mediaOfStepsPerDay_1 = median(totalStepsPerDay_1$steps)
+paste("Median of Steps per Day: " , mediaOfStepsPerDay_1)
+
+```
+```{r calcMean12,echo=FALSE}
+
+paste("Old Mean: " ,meanOfStepsPerDay, "Old Median: " , mediaOfStepsPerDay, 
+                  "Difference is", (meanOfStepsPerDay-mediaOfStepsPerDay) )
+paste("New Mean: " ,meanOfStepsPerDay_1, "New Median: " , mediaOfStepsPerDay_1,
+                  "Difference is", (meanOfStepsPerDay_1-mediaOfStepsPerDay_1))
+
+```
+After replacing the missing values, there is no difference between mean and median values!
+
+## Review of activity patterns between weekdays and weekends  
+
+Adding factor variable to denote a particular day is a weekday or weekend
+
+```{r calc7}
+
+data1 = data.table(newData)
+data1[, weekday := ifelse(weekdays(date) %in% c("Saturday", "Sunday"), "Weekend", "Weekday")]
+data1$weekday <- as.factor(data1$weekday)
+data1$interval <- as.integer(levels(data1$interval)[data1$interval])
+head(data1, 5)
+tail(data1, 5)
+```
+### Time series plot
+
+```{r plot8}
+stepsPerWeekday = aggregate(steps ~ interval+weekday, data = data1, FUN = mean)
+ggplot(stepsPerWeekday, aes(x = interval, y = steps)) + 
+  geom_line(col = "red", size = 1) + 
+  facet_wrap(~ weekday, nrow = 2, ncol = 1) + 
+  labs(title = "Average Daily Activity-- Pattern", x = "Interval", y = "Steps")
+
+```
+
+
 
 
 
