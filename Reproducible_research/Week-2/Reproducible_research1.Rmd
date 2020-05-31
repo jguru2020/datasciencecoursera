@@ -12,31 +12,37 @@ knitr::opts_chunk$set(echo = TRUE)
 # Overview  
 As part of this assignment, analysing the data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up.
 
-### Load relevant libraries
+### Loading relevant libraries
 
 ```{r loadLibs}
 library("data.table")
 library(ggplot2)
 ```
-### Prepare data for analysis
+### Preparing data for analysis  
+
 ```{r getData}
 activitydata = read.csv("activity.csv", header=TRUE, sep=",")
 str(activitydata)
 ```
-### Format activity data
+### Formatting activity data  
+
 ```{r formatData}
 activitydata$date = as.Date(activitydata$date, format="%Y-%m-%d")
 activitydata$interval = as.factor(activitydata$interval)
 str(activitydata)
 head(activitydata,10)
 ```
-### 1. Total number of steps taken per day
+## Part-1  
+
+### 1. Total number of steps taken per day  
+
 ```{r calc1}
 totalStepsPerDay = aggregate(steps ~ date, data=activitydata, FUN=sum)
 colnames(totalStepsPerDay) = c("date", "steps")
 head(totalStepsPerDay,10)
 ```
-### 2. Histogram of the total number of steps taken each day
+### 2. Histogram of the total number of steps taken each day  
+
 ```{r plot1}
 g = ggplot(totalStepsPerDay, aes(x = steps)) +
   geom_histogram(color="black", fill="grey", binwidth = 1000) +
@@ -78,27 +84,30 @@ maxInterval= stepsPerInterval[which.max(stepsPerInterval$steps),]
 maxInterval
 ```
 
-## Imputing missing values
+## Part-2 : Imputing missing values  
 
-### 1 NUmber of missing values in the activity data set
+### 1. Number of missing values in the activity data set  
+
 ```{r calc4}
 
 missingValues = sum(is.na(activitydata$steps))
 paste(" Missing values in the activity data set are: " , missingValues)
 ```
 
-### 2. Strategy for filling in all of the missing values in the dataset.  
+### 2. Strategy for filling in all of the missing values in the data set  
 
-For populating missing values, suggest to replace missing values with the mean values at same intervals accross days!
+For populating missing values, suggesting to replace missing values with the mean values at the 
+same intervals accross days!
 
-### 3. New data set by replacing missing values
+### 3. New data set by replacing missing values  
+
 ```{r calc5}
 newData = activitydata
 indexOfNA = which(is.na(newData$steps))
   for (i in indexOfNA) 
     {
       newData$steps[i] <- with(stepsPerInterval, steps[interval = newData$interval[i]])
-  }
+    }
 head(newData,10)
 
 # Check if there are any missing values in the new data set
@@ -110,13 +119,15 @@ paste(" Missing values in the new activity data set are: " , missingValues)
 
 Analysing the new data set by looking at the histogram, mean/median values below:
 
-### 4.1. Total number of steps taken per day
+### 4.1. Total number of steps taken per day  
+
 ```{r calc11}
 totalStepsPerDay_1 = aggregate(steps ~ date, data=newData, FUN=sum)
 colnames(totalStepsPerDay_1) = c("date", "steps")
 head(totalStepsPerDay_1,10)
 ```
-### 4.2. Histogram of the total number of steps taken each day
+### 4.2. Histogram of the total number of steps taken each day  
+
 ```{r plot11}
 g1 = ggplot(totalStepsPerDay_1, aes(x = steps)) +
   geom_histogram(color="black", fill="blue", binwidth = 1000) +
@@ -143,7 +154,7 @@ paste("New Mean: " ,meanOfStepsPerDay_1, "New Median: " , mediaOfStepsPerDay_1,
 ```
 After replacing the missing values, there is no difference between mean and median values!
 
-## Review of activity patterns between weekdays and weekends  
+## 5. Review of activity patterns between weekdays and weekends  
 
 Adding factor variable to denote a particular day is a weekday or weekend
 
@@ -156,7 +167,7 @@ data1$interval <- as.integer(levels(data1$interval)[data1$interval])
 head(data1, 5)
 tail(data1, 5)
 ```
-### Time series plot
+### 6. Time series plot  
 
 ```{r plot8}
 stepsPerWeekday = aggregate(steps ~ interval+weekday, data = data1, FUN = mean)
@@ -165,9 +176,8 @@ ggplot(stepsPerWeekday, aes(x = interval, y = steps)) +
   facet_wrap(~ weekday, nrow = 2, ncol = 1) + 
   labs(title = "Average Daily Activity-- Pattern", x = "Interval", y = "Steps")
 
-```
+```  
 
-
-
-
+Weekend activities have reported more number of steps than week-day activities though one of 
+the week-day peeked to maximum number of steps.m
 
