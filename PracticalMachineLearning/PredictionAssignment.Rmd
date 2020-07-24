@@ -1,0 +1,163 @@
+---
+title: "Practical Machine Learning -- Assignment"
+author: "Gururaj"
+date: "7/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Executive Summary  
+
+This assignment will analyse the data collected from wearable like Jawbone Up, Nike FuelBand, and Fitbit. Input data for this analysis comes from accelerometers on the belt, forearm, arm, and dumbell of 6 participants. These participants were asked to perform barbell lifts correctly and incorrectly in 5 different ways. As part of this assignment, I will try to create prediction models using cross validation and calculating the sample error.    
+
+
+### Load relevant libraries  
+
+Loading relevant R libraries. Assuming these libraries are already installed  
+
+```{r loadLib}
+library(caret);
+library(rpart.plot);
+library(randomForest);
+library(gbm)
+library(scales)
+```  
+### Data  Source
+
+Training Data is downloaded from :  https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv  
+Test Data is downloaded from : https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
+
+## Data Extraction
+
+Down load train & test data from the above sources.
+
+
+```{r loadData}
+trainingURL = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
+testingURL  = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
+trainData   = read.csv(url(trainingURL))
+testData    = read.csv(url(testingURL))
+dim(trainData)
+dim(testData)
+```   
+
+## Data Pre-Processing  
+
+Remove variables with the following conditions:  
+1. Having greater than 95% of NA  
+2. Having Nearly Zero Variance  
+3. Having no relevance in the analysis  
+
+```{r cleanData}
+
+#1
+
+naCol	    = sapply(trainData,function(x)mean(is.na(x)))>0.95
+trainData = trainData[,naCol==FALSE]
+testData  = testData[,naCol==FALSE]
+
+#2
+trainNZV   = nearZeroVar(trainData)
+trainData  = trainData[,-trainNZV]
+testNZV    = nearZeroVar(testData)
+testData   = testData[,-testNZV]
+
+#3
+trainData = trainData[,-c(1:7)]
+testData  = testData[,-c(1:7)]
+dim(trainData)
+dim(testData)
+
+```
+### Data partition  
+```{r partnData}
+inTrain     = createDataPartition(trainData$classe,p=3/4,list=FALSE)
+trainingSet = trainData[inTrain,]
+testingSet  = trainData[-inTrain,]
+dim(trainingSet)
+dim(testingSet)
+
+```  
+## Create prediction models
+Using Decision Tree model and Random forest models
+
+### 1. Random Forest Model
+```{r rfModel}  
+set.seed(100000)
+rfModelFit        = train(classe ~.,data=trainingSet, method="rf",ntree=10)
+rfPredictionFit   = predict(rfModelFit,trainingSet)
+rfConfusionMatrix = confusionMatrix(rfPredictionFit,trainingSet$classe)
+rfConfusionMatrix
+
+```
+
+### 2. Decision Tree Model
+```{r dtModel}
+set.seed(100000)
+dtModelFit        = train(classe ~.,data=trainingSet,method="rpart")
+dtPredictionFit   = predict(dtModelFit,trainingSet)
+dtConfusionMatrix = confusionMatrix(dtPredictionFit,trainingSet$classe)
+dtConfusionMatrix
+```
+### 3. Linear Discriminant Analysis Model
+
+```{r ldaModel}
+set.seed(100000)
+
+ldaModelFit = train(classe ~ ., data=trainingSet, method = "lda")
+ldaPredictionFit   = predict(ldaModelFit,trainingSet)
+ldaConfusionMatrix = confusionMatrix(ldaPredictionFit,trainingSet$classe)
+ldaConfusionMatrix
+
+```
+### Results from above analysis
+
+```{r cala,echo=FALSE}
+rfPercent  = sprintf("%1.2f%%", 100*rfConfusionMatrix$overall["Accuracy"])
+dtPercent  = sprintf("%1.2f%%", 100*dtConfusionMatrix$overall["Accuracy"])
+ldaPercent = sprintf("%1.2f%%", 100*ldaConfusionMatrix$overall["Accuracy"])
+```
+
+```{r results-1,echo=FALSE}
+paste("Rain Forest Model Accuracy:" , rfPercent)
+```
+```{r results-2,echo=FALSE}
+paste("Decision Tree Model Accuracy:" , dtPercent)
+```
+
+```{r results-3,echo=FALSE}
+paste("Linear Discriminant Analysis Model Accuracy:" , ldaPercent )
+```
+## Conclusion  
+Based on analysis of above prediction models, Random Forest Model is best fitted in terms of highest accuracy and lowest sample error. Due to this reason, applying RF model to predict test/validation data
+
+```{r summary}
+testPrediction = predict(rfModelFit,newdata = testData)
+testPrediction
+
+```
+
+
+## Appendix
+
+### Plot-1 : Random Forest Prediction Model
+
+```{r plot-1, echo=FALSE}
+plot(rfConfusionMatrix$table,main=paste("Random Forest Prediction Model Accuracy = ", rfPercent ))
+     
+```
+
+
+### Plot-2 : Decision Tree Prediction Model
+
+```{r plot-2, echo=FALSE}
+
+rpart.plot(dtModelFit$finalModel,roundint = FALSE)
+
+```
+
+
+
