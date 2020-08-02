@@ -1,0 +1,42 @@
+---
+title: "Dunkin Donut Locations Map in US"
+author: "Gururaj"
+date: "8/1/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Dunkin Donut Locations Map in US using Leaflet and R
+
+This web page demonstrate the skill of creating an interactive map using Leaflet, R and R Markdown. For this map, I have collected the location details of Dunkin' Donuts, is an American multinational coffee and doughnut company.
+
+```{r readCSV}
+library(leaflet)
+locationsData = read.csv("DunkinDonutLocations.csv")
+ddLocations <- data.frame(Lat = locationsData$lat,
+                        Long = locationsData$lng,
+                        Adrs = locationsData$address)
+```
+  
+
+```{r createMap, message=FALSE}  
+ddIcon = makeIcon (
+  iconUrl = "dd.png",
+  iconWidth = 31*215/230,
+  iconHeight = 31 )
+
+myMap = ddLocations %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(icon = ddIcon, clusterOptions = markerClusterOptions(),popup = ddLocations$Adrs)
+
+
+```
+### 08-01-2020  
+
+```{r displayMap, fig.align='center', echo=FALSE} 
+myMap
+```
