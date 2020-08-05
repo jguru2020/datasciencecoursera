@@ -1,0 +1,61 @@
+---
+title: "Analyse Browser Market Share using R & Plotly"
+author: "Gururaj"
+date: "8/4/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Worldwide Browser Market Share   
+Analysed  browser market share data from July-2019 through July-2020. 
+Chrome, Safari, Firefox and Internet Explorer accounds for
+90% of world share. Data collected from https://gs.statcounter.com/ presented 
+in time-series plots using R-Plotly.
+
+- Chrome - 65.89%
+- Safari - 16.65%
+- Firefox - 4.26%
+
+
+``` {r prep, echo = FALSE, message=FALSE}
+library(plotly)
+library(ggplot2)
+browserData = read.csv("browser-ww-monthly-201907-202007.csv")
+browserData$Date = as.Date(browserData$Date,'%Y-%m-%d')
+
+```  
+
+
+## Individual plot per Browser  
+```{r plot-1, echo=FALSE,message=FALSE}
+p1 = plot_ly(browserData, x = ~Date ,  y = ~Chrome , type = 'scatter', mode = 'lines+markers') %>% add_lines(name = "Chrome")
+p2 = plot_ly(browserData, x = ~Date ,  y = ~Safari , type = 'scatter', mode = 'lines+markers') %>% add_lines(name = "Safari")
+p3 = plot_ly(browserData, x = ~Date ,  y = ~Firefox , type = 'scatter', mode = 'lines+markers') %>% add_lines(name = "Firefox")
+p4 = plot_ly(browserData, x = ~Date ,  y = ~IE , type = 'scatter', mode = 'lines+markers') %>% add_lines(name = "IE")
+subplot(
+  p1,p2,p3,p4, nrows = 4
+)
+```  
+
+
+
+## Combined Plot
+
+```{r plot-2, echo=FALSE,message=FALSE}
+plot = plot_ly(browserData, x = ~Date ,  y = ~Chrome , name = 'Chrome',type = 'scatter', mode = 'lines+markers')
+plot = plot %>% add_trace(y = ~Safari , type = 'scatter',name = 'Safari', mode = 'lines+markers')
+plot = plot %>% add_trace(y = ~Firefox , type = 'scatter', name = 'Firefox',mode = 'lines+markers')
+plot = plot %>% layout(title = 'Browser Market Share Worldwide',
+                       xaxis = list(title = 'Duration'),
+                       yaxis = list (title = '% Share')) 
+plot  
+
+```  
+
+
+## Thank you!!
+
+
