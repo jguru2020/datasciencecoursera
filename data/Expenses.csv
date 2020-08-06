@@ -44,7 +44,7 @@ X42,Other,Education,11/29/2019,20.39
 X43,Merchandise,Groceries,11/29/2019,201.1
 X44,Transportation,Fuel,11/29/2019,99.9
 X45,Merchandise,Groceries,11/27/2019,780.03
-X46,Restaurant,Café,11/23/2019,22.04
+X46,Restaurant,Cafe,11/23/2019,22.04
 X47,Merchandise,Online,11/17/2019,16.97
 X48,Communications,Internet,11/17/2019,1.58
 X49,Merchandise,Furnishing,11/16/2019,6.98
@@ -65,10 +65,10 @@ X63,Merchandise,Online,10/30/2019,268.43
 X64,Merchandise,Online,10/27/2019,11.98
 X65,Merchandise,Groceries,10/26/2019,110
 X66,Merchandise,Groceries,10/25/2019,25.74
-X67,Restaurant,Café,10/25/2019,200
+X67,Restaurant,Cafe,10/25/2019,200
 X68,Transportation,Fuel,10/24/2019,10
 X69,Other,Education,10/24/2019,400
-X70,Restaurant,Café,10/23/2019,50
+X70,Restaurant,Cafe,10/23/2019,50
 X71,Merchandise,Pharmacies,10/21/2019,66.72
 X72,Services,Others,10/20/2019,3.22
 X73,Merchandise,Pharmacies,10/20/2019,5
@@ -84,29 +84,29 @@ X82,Transportation,Auto,10/14/2019,106.3
 X83,Other,Miscellaneous,10/13/2019,5.08
 X84,Merchandise,Groceries,10/13/2019,72.67
 X85,Merchandise,Clothing ,10/11/2019,3.8
-X86,Restaurant,Café,10/11/2019,13.2
-X87,Restaurant,Café,10/11/2019,36
+X86,Restaurant,Cafe,10/11/2019,13.2
+X87,Restaurant,Cafe,10/11/2019,36
 X88,Merchandise,Sporting,10/11/2019,100
-X89,Restaurant,Café,10/11/2019,100
-X90,Restaurant,Café,10/10/2019,86.35
+X89,Restaurant,Cafe,10/11/2019,100
+X90,Restaurant,Cafe,10/10/2019,86.35
 X91,Other,Miscellaneous,10/10/2019,10.73
 X92,Merchandise,Wholesale,10/9/2019,46
 X93,Merchandise,Wholesale,10/8/2019,13.95
-X94,Restaurant,Café,10/7/2019,100
+X94,Restaurant,Cafe,10/7/2019,100
 X95,Merchandise,Pharmacies,10/6/2019,47.99
 X96,Merchandise,Groceries,10/6/2019,55
 X97,Merchandise,Online,10/6/2019,42.98
 X98,Communications,Internet,10/5/2019,4.38
 X99,Merchandise,Groceries,10/5/2019,50
 X100,Merchandise,Sporting,10/4/2019,50
-X101,Restaurant,Café,10/3/2019,17.96
+X101,Restaurant,Cafe,10/3/2019,17.96
 X102,Merchandise,GeneralRetail,10/3/2019,250
 X103,Merchandise,GeneralRetail,10/3/2019,250
 X104,Merchandise,Clothing ,10/2/2019,39.99
 X105,Merchandise,Clothing ,10/2/2019,5.9
 X106,Merchandise,Clothing ,9/30/2019,150
 X107,Merchandise,Groceries,9/30/2019,130.85
-X108,Restaurant,Café,9/29/2019,32
+X108,Restaurant,Cafe,9/29/2019,32
 X109,Merchandise,Groceries,9/28/2019,85.2
 X110,Merchandise,Online,9/28/2019,27.99
 X111,Merchandise,Sporting,9/27/2019,44.51
@@ -120,8 +120,8 @@ X118,Merchandise,Groceries,9/15/2019,6
 X119,Merchandise,Groceries,9/15/2019,137.97
 X120,Merchandise,Clothing ,9/14/2019,6.98
 X121,Merchandise,Groceries,9/12/2019,2.99
-X122,Restaurant,Café,9/9/2019,101
-X123,Restaurant,Café,9/7/2019,32.44
+X122,Restaurant,Cafe,9/9/2019,101
+X123,Restaurant,Cafe,9/7/2019,32.44
 X124,Merchandise,Groceries,9/7/2019,231.75
 X125,Merchandise,Groceries,9/7/2019,14.68
 X126,Merchandise,Groceries,9/3/2019,39.99
@@ -129,9 +129,9 @@ X127,Merchandise,Media,9/3/2019,17.96
 X128,Merchandise,Groceries,9/1/2019,25
 X129,Merchandise,Groceries,8/29/2019,679.11
 X130,Merchandise,Groceries,8/27/2019,29
-X131,Restaurant,Café,8/26/2019,19.95
-X132,Restaurant,Café,8/24/2019,24.38
-X133,Restaurant,Café,8/14/2019,321.57
+X131,Restaurant,Cafe,8/26/2019,19.95
+X132,Restaurant,Cafe,8/24/2019,24.38
+X133,Restaurant,Cafe,8/14/2019,321.57
 X134,Other,Education,8/14/2019,50
 X135,Restaurant,Restaurant,8/13/2019,15.86
 X136,Communications,Internet,8/13/2019,19.95
@@ -142,10 +142,10 @@ X140,Merchandise,Groceries,8/11/2019,14.97
 X141,Merchandise,Media,8/11/2019,77.66
 X142,Other,Education,8/9/2019,9.44
 X143,Merchandise,Online,8/8/2019,38.88
-X144,Restaurant,Café,8/4/2019,17.96
+X144,Restaurant,Cafe,8/4/2019,17.96
 X145,Communications,Internet,8/1/2019,6.42
 X146,Transportation,Auto,8/1/2019,230.93
-X147,Restaurant,Café,7/28/2019,5
+X147,Restaurant,Cafe,7/28/2019,5
 X148,Restaurant,Restaurant,7/23/2019,20
 X149,Services,Insurance,7/21/2019,13.94
 X150,Merchandise,Online,7/20/2019,69.99
@@ -208,10 +208,10 @@ X206,Merchandise,Groceries,5/7/2019,100
 X207,Merchandise,Wholesale,5/7/2019,100
 X208,Transportation,Fuel,5/7/2019,35
 X209,Transportation,Fuel,5/6/2019,17.96
-X210,Restaurant,Café,5/3/2019,8.58
+X210,Restaurant,Cafe,5/3/2019,8.58
 X211,Communications,Internet,5/1/2019,6.42
 X212,Transportation,Auto,4/30/2019,433.01
-X213,Restaurant,Café,4/29/2019,6.43
+X213,Restaurant,Cafe,4/29/2019,6.43
 X214,Restaurant,Restaurant,4/24/2019,25
 X215,Services,Insurance,4/22/2019,113.57
 X216,Merchandise,Online,4/16/2019,7.49
