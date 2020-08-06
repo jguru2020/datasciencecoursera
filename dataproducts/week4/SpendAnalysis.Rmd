@@ -1,0 +1,85 @@
+---
+title: "Spend Analysis using R & Shiny App"
+author: "Gururaj"
+date: "8/6/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+As part of this assignment, reviewed the expenses of an individual in the year 2019 using R and Shiny App.  
+Following are the inputs for the analysis:  
+1. CSV data @  https://jguru2020.github.io/data/Expenses.csv  
+2  Libraries like **dplyr** & **Plotly**  
+3. R & Shiny App  
+4. Shinyapps.io
+
+```{r load, echo = FALSE, message=FALSE}
+library(dplyr)
+library(plotly)
+spendData = read.csv("https://jguru2020.github.io/data/Expenses.csv")
+```
+
+## Spend analysis by Histogram
+
+```{r plot-1, echo = FALSE, message=FALSE}
+
+plot1 <- plot_ly(spendData, x = ~category) %>% add_histogram()
+
+plot1
+
+```  
+
+## Spend analysis by Pie Chart
+
+```{r plot-2, echo = FALSE, message=FALSE}
+
+plot2 <- plot_ly(spendData, labels = ~category, values = ~spend, type = 'pie')
+plot2 <- plot2 %>% layout(title = 'Spend Analysis',
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+plot2
+```
+
+
+## Challenges  
+
+Above shown plots are stand-alone / static plots. When we have more sub catories for each category, 
+we have to create those many plots.   
+
+Challenges:  
+- Drill-down of the plots is not possible  
+- Unable to access analysis from web/mobile/tablet  
+
+## Solution  
+
+Using Shiny App is the solution. With Shiny app we could:
+
+- Access the analysis from anywhere in the world (web/mobile/tablet)
+- Look & Feel is same accross the platforms (web/mobile/tablet)
+- Allows user to click on a slice of the pie to ‘drill-down’ into sub-categories of the chosen category  
+
+Souce code @ https://github.com/jguru2020/jguru2020.github.io/tree/master/dataproducts/week4
+
+## Demo
+
+Access Shiny App @ https://jguru2020.shinyapps.io/spend_analysis/
+
+- Click on category like **Merchandise**
+- See all the sub-categories of Merchandise
+- Click **Back** button to see pie chart with main categories
+- Click on category like **Transportaion**
+- See all the sub-categories of Merchandise
+- Click **Back** button to see pie chart with main categories
+- Continue...  
+
+
+
+## Thank you!!
+
+
