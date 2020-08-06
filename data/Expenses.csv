@@ -1,0 +1,264 @@
+id,category,sub_category,order_date,spend
+X1,Entertainment,Associations,12/31/2019,30
+X2,Entertainment,Attractions,12/31/2019,37.81
+X3,Entertainment,Others,12/30/2019,93.5
+X4,Entertainment,Others,12/29/2019,10.86
+X5,Entertainment,Associations,12/29/2019,80.95
+X6,Entertainment,Theme Parks,12/29/2019,12.98
+X7,Entertainment,Associations,12/29/2019,12.98
+X8,Entertainment,Others,12/29/2019,6.16
+X9,Entertainment,Others,12/28/2019,11.2
+X10,Entertainment,Associations,12/27/2019,60.42
+X11,Entertainment,Attractions,12/23/2019,4.85
+X12,Entertainment,Others,12/22/2019,42.98
+X13,Entertainment,Others,12/20/2019,15.81
+X14,Entertainment,Associations,12/19/2019,116.2
+X15,Entertainment,Theme Parks,12/17/2019,500
+X16,Entertainment,Associations,12/17/2019,438.58
+X17,Entertainment,Others,12/16/2019,57.55
+X18,Entertainment,Others,12/14/2019,16
+X19,Transportation,Fuel,12/11/2019,10
+X20,Transportation,Leasing,12/10/2019,64.82
+X21,Transportation,Leasing,12/10/2019,779
+X22,Merchandise,Wholesale,12/9/2019,200
+X23,Transportation,Fuel,12/9/2019,200
+X24,Merchandise,Groceries,12/8/2019,270
+X25,Merchandise,Pharmacies,12/7/2019,25.92
+X26,Transportation,Fuel,12/7/2019,30
+X27,Restaurant,Restaurant,12/7/2019,4.29
+X28,Restaurant,Restaurant,12/6/2019,9.42
+X29,Merchandise,Online,12/3/2019,10
+X30,Merchandise,Online,12/3/2019,30
+X31,Other,Charities,12/2/2019,17.96
+X32,Services,Insurance,12/2/2019,96.63
+X33,Merchandise,Groceries,12/2/2019,101
+X34,Restaurant,Restaurant,12/1/2019,101.34
+X35,Merchandise,Department ,11/30/2019,13.47
+X36,Merchandise,Sporting,11/30/2019,24.43
+X37,Merchandise,Clothing ,11/30/2019,9.99
+X38,Merchandise,Clothing ,11/29/2019,49.9
+X39,Merchandise,Department ,11/29/2019,11.98
+X40,Merchandise,Department ,11/29/2019,3.79
+X41,Merchandise,Furnishing,11/29/2019,9.99
+X42,Other,Education,11/29/2019,20.39
+X43,Merchandise,Groceries,11/29/2019,201.1
+X44,Transportation,Fuel,11/29/2019,99.9
+X45,Merchandise,Groceries,11/27/2019,780.03
+X46,Restaurant,Café,11/23/2019,22.04
+X47,Merchandise,Online,11/17/2019,16.97
+X48,Communications,Internet,11/17/2019,1.58
+X49,Merchandise,Furnishing,11/16/2019,6.98
+X50,Transportation,Leasing,11/13/2019,1.08
+X51,Transportation,Auto,11/11/2019,39.99
+X52,Merchandise,Wholesale,11/9/2019,17.17
+X53,Transportation,Leasing,11/9/2019,1000
+X54,Merchandise,Wholesale,11/8/2019,23.07
+X55,Merchandise,Groceries,11/8/2019,25
+X56,Merchandise,Online,11/6/2019,95
+X57,Merchandise,Groceries,11/4/2019,45
+X58,Merchandise,Groceries,11/2/2019,70.11
+X59,Merchandise,Online,11/2/2019,17.96
+X60,Merchandise,Online,11/1/2019,65.99
+X61,Merchandise,Groceries,10/31/2019,16.72
+X62,Merchandise,Clothing ,10/30/2019,0.01
+X63,Merchandise,Online,10/30/2019,268.43
+X64,Merchandise,Online,10/27/2019,11.98
+X65,Merchandise,Groceries,10/26/2019,110
+X66,Merchandise,Groceries,10/25/2019,25.74
+X67,Restaurant,Café,10/25/2019,200
+X68,Transportation,Fuel,10/24/2019,10
+X69,Other,Education,10/24/2019,400
+X70,Restaurant,Café,10/23/2019,50
+X71,Merchandise,Pharmacies,10/21/2019,66.72
+X72,Services,Others,10/20/2019,3.22
+X73,Merchandise,Pharmacies,10/20/2019,5
+X74,Merchandise,Groceries,10/20/2019,4.66
+X75,Restaurant,Restaurant,10/20/2019,4.42
+X76,Restaurant,Restaurant,10/19/2019,6.1
+X77,Merchandise,Groceries,10/19/2019,12.07
+X78,Merchandise,Online,10/19/2019,68.99
+X79,Communications,Internet,10/19/2019,20
+X80,Merchandise,Wholesale,10/18/2019,192.68
+X81,Merchandise,Clothing ,10/16/2019,10
+X82,Transportation,Auto,10/14/2019,106.3
+X83,Other,Miscellaneous,10/13/2019,5.08
+X84,Merchandise,Groceries,10/13/2019,72.67
+X85,Merchandise,Clothing ,10/11/2019,3.8
+X86,Restaurant,Café,10/11/2019,13.2
+X87,Restaurant,Café,10/11/2019,36
+X88,Merchandise,Sporting,10/11/2019,100
+X89,Restaurant,Café,10/11/2019,100
+X90,Restaurant,Café,10/10/2019,86.35
+X91,Other,Miscellaneous,10/10/2019,10.73
+X92,Merchandise,Wholesale,10/9/2019,46
+X93,Merchandise,Wholesale,10/8/2019,13.95
+X94,Restaurant,Café,10/7/2019,100
+X95,Merchandise,Pharmacies,10/6/2019,47.99
+X96,Merchandise,Groceries,10/6/2019,55
+X97,Merchandise,Online,10/6/2019,42.98
+X98,Communications,Internet,10/5/2019,4.38
+X99,Merchandise,Groceries,10/5/2019,50
+X100,Merchandise,Sporting,10/4/2019,50
+X101,Restaurant,Café,10/3/2019,17.96
+X102,Merchandise,GeneralRetail,10/3/2019,250
+X103,Merchandise,GeneralRetail,10/3/2019,250
+X104,Merchandise,Clothing ,10/2/2019,39.99
+X105,Merchandise,Clothing ,10/2/2019,5.9
+X106,Merchandise,Clothing ,9/30/2019,150
+X107,Merchandise,Groceries,9/30/2019,130.85
+X108,Restaurant,Café,9/29/2019,32
+X109,Merchandise,Groceries,9/28/2019,85.2
+X110,Merchandise,Online,9/28/2019,27.99
+X111,Merchandise,Sporting,9/27/2019,44.51
+X112,Merchandise,Online,9/22/2019,6.53
+X113,Merchandise,Clothing ,9/22/2019,9.42
+X114,Merchandise,Groceries,9/22/2019,117.59
+X115,Communications,Internet,9/21/2019,18.88
+X116,Merchandise,Book ,9/20/2019,9.65
+X117,Merchandise,Clothing ,9/20/2019,150
+X118,Merchandise,Groceries,9/15/2019,6
+X119,Merchandise,Groceries,9/15/2019,137.97
+X120,Merchandise,Clothing ,9/14/2019,6.98
+X121,Merchandise,Groceries,9/12/2019,2.99
+X122,Restaurant,Café,9/9/2019,101
+X123,Restaurant,Café,9/7/2019,32.44
+X124,Merchandise,Groceries,9/7/2019,231.75
+X125,Merchandise,Groceries,9/7/2019,14.68
+X126,Merchandise,Groceries,9/3/2019,39.99
+X127,Merchandise,Media,9/3/2019,17.96
+X128,Merchandise,Groceries,9/1/2019,25
+X129,Merchandise,Groceries,8/29/2019,679.11
+X130,Merchandise,Groceries,8/27/2019,29
+X131,Restaurant,Café,8/26/2019,19.95
+X132,Restaurant,Café,8/24/2019,24.38
+X133,Restaurant,Café,8/14/2019,321.57
+X134,Other,Education,8/14/2019,50
+X135,Restaurant,Restaurant,8/13/2019,15.86
+X136,Communications,Internet,8/13/2019,19.95
+X137,Merchandise,Groceries,8/13/2019,27.36
+X138,Merchandise,Groceries,8/11/2019,50.47
+X139,Merchandise,Electronics ,8/11/2019,4
+X140,Merchandise,Groceries,8/11/2019,14.97
+X141,Merchandise,Media,8/11/2019,77.66
+X142,Other,Education,8/9/2019,9.44
+X143,Merchandise,Online,8/8/2019,38.88
+X144,Restaurant,Café,8/4/2019,17.96
+X145,Communications,Internet,8/1/2019,6.42
+X146,Transportation,Auto,8/1/2019,230.93
+X147,Restaurant,Café,7/28/2019,5
+X148,Restaurant,Restaurant,7/23/2019,20
+X149,Services,Insurance,7/21/2019,13.94
+X150,Merchandise,Online,7/20/2019,69.99
+X151,Services,Others,7/20/2019,108
+X152,Services,Advertising,7/20/2019,39.97
+X153,Merchandise,Groceries,7/20/2019,39.97
+X154,Transportation,Auto,7/20/2019,54
+X155,Merchandise,Online,7/19/2019,162.08
+X156,Merchandise,Groceries,7/12/2019,14.57
+X157,Communications,Internet,7/11/2019,14.55
+X158,Communications,Internet,7/10/2019,19.89
+X159,Communications,Internet,7/6/2019,10.72
+X160,Merchandise,Wholesale,7/5/2019,20
+X161,Merchandise,Groceries,7/5/2019,17.96
+X162,Merchandise,Groceries,7/5/2019,10.93
+X163,Merchandise,Groceries,7/4/2019,21.71
+X164,Restaurant,Restaurant,7/1/2019,6.42
+X165,Restaurant,Restaurant,6/26/2019,5.35
+X166,Restaurant,Restaurant,6/26/2019,17.95
+X167,Merchandise,Clothing ,6/25/2019,61.98
+X168,Restaurant,Restaurant,6/23/2019,1.99
+X169,Merchandise,Clothing ,6/23/2019,5.37
+X170,Merchandise,Clothing ,6/23/2019,10.93
+X171,Merchandise,Clothing ,6/23/2019,16.91
+X172,Merchandise,Clothing ,6/22/2019,3.45
+X173,Restaurant,Restaurant,6/22/2019,5.13
+X174,Merchandise,Groceries,6/21/2019,25.06
+X175,Merchandise,Clothing ,6/21/2019,10.72
+X176,Merchandise,Online,6/20/2019,36
+X177,Communications,Internet,6/18/2019,39.99
+X178,Other,Education,6/15/2019,22.83
+X179,Communications,Internet,6/15/2019,4.99
+X180,Communications,Internet,6/13/2019,2.13
+X181,Transportation,Auto,6/12/2019,161.61
+X182,Merchandise,Book ,6/5/2019,17.96
+X183,Restaurant,Restaurant,6/1/2019,6.42
+X184,Services,Banking,5/28/2019,250.18
+X185,Services,Internet,5/27/2019,24.67
+X186,Communications,Telecom,5/27/2019,12.93
+X187,Merchandise,Book ,5/21/2019,2.95
+X188,Merchandise,Groceries,5/20/2019,1.61
+X189,Merchandise,Book ,5/20/2019,5.37
+X190,Services,Insurance,5/19/2019,3.98
+X191,Services,Insurance,5/19/2019,8.58
+X192,Merchandise,Online,5/19/2019,16.07
+X193,Merchandise,Department ,5/18/2019,4.5
+X194,Merchandise,Furnishing,5/17/2019,260
+X195,Merchandise,Groceries,5/14/2019,100
+X196,Merchandise,Groceries,5/14/2019,35
+X197,Communications,Internet,5/13/2019,61.25
+X198,Merchandise,Wholesale,5/13/2019,100
+X199,Communications,Internet,5/13/2019,100
+X200,Merchandise,Groceries,5/12/2019,38.41
+X201,Merchandise,Department ,5/12/2019,40.44
+X202,Merchandise,Groceries,5/11/2019,16.74
+X203,Restaurant,Restaurant,5/11/2019,3.68
+X204,Merchandise,Wholesale,5/11/2019,11.33
+X205,Merchandise,Wholesale,5/11/2019,0.27
+X206,Merchandise,Groceries,5/7/2019,100
+X207,Merchandise,Wholesale,5/7/2019,100
+X208,Transportation,Fuel,5/7/2019,35
+X209,Transportation,Fuel,5/6/2019,17.96
+X210,Restaurant,Café,5/3/2019,8.58
+X211,Communications,Internet,5/1/2019,6.42
+X212,Transportation,Auto,4/30/2019,433.01
+X213,Restaurant,Café,4/29/2019,6.43
+X214,Restaurant,Restaurant,4/24/2019,25
+X215,Services,Insurance,4/22/2019,113.57
+X216,Merchandise,Online,4/16/2019,7.49
+X217,Merchandise,Groceries,4/15/2019,16
+X218,Merchandise,Online,4/13/2019,9.99
+X219,Merchandise,Groceries,4/7/2019,45.98
+X220,Merchandise,Wholesale ,4/6/2019,26.75
+X221,Merchandise,Groceries,4/6/2019,17.96
+X222,Merchandise,Groceries,4/4/2019,11.17
+X223,Merchandise,Groceries,4/3/2019,19.99
+X224,Merchandise,Clothing ,4/1/2019,6.42
+X225,Merchandise,Clothing ,3/31/2019,5.98
+X226,Merchandise,Clothing ,3/30/2019,2.89
+X227,Merchandise,Clothing ,3/30/2019,34.65
+X228,Merchandise,Groceries,3/28/2019,12.86
+X229,Merchandise,Clothing ,3/28/2019,70
+X230,Merchandise,Online,3/28/2019,39
+X231,Other,Education,3/24/2019,25
+X232,Merchandise,Book ,3/23/2019,3.95
+X233,Merchandise,Book ,3/23/2019,4.27
+X234,Merchandise,Groceries,3/23/2019,50.47
+X235,Merchandise,Book ,3/23/2019,51.99
+X236,Merchandise,Online,3/23/2019,95.46
+X237,Merchandise,Department ,3/18/2019,40
+X238,Merchandise,Furnishing,3/17/2019,138.23
+X239,Merchandise,Groceries,3/16/2019,2.99
+X240,Merchandise,Groceries,3/7/2019,17.96
+X241,Merchandise,Groceries,3/6/2019,39.99
+X242,Merchandise,Department ,3/4/2019,35
+X243,Merchandise,Groceries,3/1/2019,6.42
+X244,Merchandise,Wholesale ,2/23/2019,19.99
+X245,Merchandise,Groceries,2/23/2019,11.69
+X246,Merchandise,Wholesale ,2/19/2019,49.78
+X247,Services,Banking,2/18/2019,17.95
+X248,Services,Internet,2/18/2019,12.99
+X249,Communications,Internet,2/18/2019,0.29
+X250,Services,Insurance,2/9/2019,183.35
+X251,Communications,Internet,2/1/2019,6.42
+X252,Restaurant,Restaurant,1/27/2019,50
+X253,Transportation,Fuel,1/26/2019,14.84
+X254,Entertainment,Associations,1/19/2019,36
+X255,Entertainment,Attractions,1/19/2019,68.66
+X256,Entertainment,Others,1/13/2019,10.34
+X257,Entertainment,Others,1/12/2019,3
+X258,Entertainment,Associations,1/12/2019,32.34
+X259,Entertainment,ThemeParks,1/11/2019,3.99
+X260,Entertainment,Associations,1/6/2019,19.95
+X261,Entertainment,Others,1/4/2019,35
+X262,Entertainment,Others,1/3/2019,49
+X263,Transportation,Fuel,1/3/2019,21.49
