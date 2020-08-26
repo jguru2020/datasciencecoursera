@@ -1,0 +1,40 @@
+---
+title: "Capstone Project -- Word Prediction using NLP"
+author: "Gururaj"
+date: "8/25/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Excecutive Summary
+
+Goal of this project is to create a web application using R & ShinyApp that provides a mechanism to enter a 
+word phrase as an input and will also predict the next word based on N-Gram alogorithms.
+
+## Approach
+
+1. Downloaded the dataset(twitter,news and blogs) in consideration
+2. Reviewed the details of the dataset(size, lines, word count ect.)
+3. Since data size is huge sampled the data
+4. Performed clean-up tasks like removing and stemming using **tm** package
+5. Created Unigram, Bigram,Trigram and Quadgram tokens using **quanteda** package 
+6. Save DFMs to local file (with rds extension)
+7. Create ShinyApp with N-gram prediction model
+
+## Outcomes
+
+Test the following web application:
+
+https://jguru2020.shinyapps.io/Capstone/ 
+
+Review the implementation:
+
+https://github.com/jguru2020/jguru2020.github.io/tree/master/capstone
+
+
+
+## Thank you!!
+
