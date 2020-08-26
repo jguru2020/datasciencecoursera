@@ -17,14 +17,14 @@ predict <- function(phrase) {
   if (length(word)>= 3) {
     word <- tail(word,3)
     if (identical(character(0),head(quadgram[quadgram$unigram == word[1] & quadgram$bigram == word[2] & quadgram$trigram == word[3], 4],1))){
-      Predict(paste(word[2],word[3],sep=" "))
+      predict(paste(word[2],word[3],sep=" "))
     }
     else {msg <<- "Next word is predicted using Quadgram."; head(quadgram[quadgram$unigram == word[1] & quadgram$bigram == word[2] & quadgram$trigram == word[3], 4],1)}
   }
   else if (length(word) == 2){
     word <- tail(word,2)
     if (identical(character(0),head(trigram[trigram$unigram == word[1] & trigram$bigram == word[2], 3],1))) {
-      Predict(word[2])
+      predict(word[2])
     }
     else {msg<<- "Next word is predicted using Trigram."; head(trigram[trigram$unigram == word[1] & trigram$bigram == word[2], 3],1)}
   }
